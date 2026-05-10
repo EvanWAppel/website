@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 import { siteConfig } from "@/data/site";
 
 const navLinks = [
@@ -10,6 +11,8 @@ const navLinks = [
   { label: "Resume", href: "#resume" },
   { label: "Contact", href: "#contact" },
 ];
+
+const externalLinks = [{ label: "Fiction", href: "/fiction" }];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,6 +38,15 @@ export default function Navbar() {
               >
                 {label}
               </a>
+            ))}
+            {externalLinks.map(({ label, href }) => (
+              <Link
+                key={label}
+                href={href}
+                className="text-sm font-medium text-neutral-600 hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded"
+              >
+                {label}
+              </Link>
             ))}
           </nav>
 
@@ -63,6 +75,16 @@ export default function Navbar() {
               >
                 {label}
               </a>
+            ))}
+            {externalLinks.map(({ label, href }) => (
+              <Link
+                key={label}
+                href={href}
+                onClick={() => setMenuOpen(false)}
+                className="text-sm font-medium text-neutral-700 hover:text-accent px-3 py-2 rounded-lg hover:bg-neutral-50 transition-colors"
+              >
+                {label}
+              </Link>
             ))}
           </nav>
         </div>
