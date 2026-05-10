@@ -32,12 +32,13 @@ export default function Hero() {
             </div>
           </div>
           <div className="shrink-0">
-            <div className="relative w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden ring-4 ring-blue-100">
+            <div className="relative w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden ring-4 ring-blue-100 bg-neutral-900">
               <Image
                 src={siteConfig.photo}
                 alt={`Photo of ${siteConfig.name}`}
                 fill
                 className="object-cover"
+                style={{ objectPosition: "40% 60%", transform: "scale(0.85)", transformOrigin: "40% 60%" }}
                 priority
               />
             </div>
