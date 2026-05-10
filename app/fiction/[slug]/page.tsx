@@ -128,13 +128,14 @@ export default async function FictionPiecePage({
                   dangerouslySetInnerHTML={{ __html: section.content }}
                 />
               ) : (
-                <div key={i} className="my-8 relative w-full h-56 rounded-lg overflow-hidden bg-neutral-100">
+                <div key={i} className="my-8 rounded-lg overflow-hidden bg-neutral-100">
                   <Image
                     src={section.src}
                     alt=""
-                    fill
+                    width={0}
+                    height={0}
                     sizes="(max-width: 672px) 100vw, 672px"
-                    className="object-cover"
+                    className="w-full h-auto"
                   />
                 </div>
               )
