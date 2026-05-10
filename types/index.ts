@@ -1,3 +1,5 @@
+import type React from "react";
+
 export interface SiteConfig {
   name: string;
   title: string;
@@ -42,4 +44,5 @@ export interface ResumeData {
 export interface ResumeVariant {
   label: string;
   path: string;
+  icon: React.ComponentType<{ size?: number; className?: string }>;
 }

@@ -3,6 +3,7 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import TechTag from "@/components/ui/TechTag";
 import { Download } from "lucide-react";
 
+
 export default function Resume() {
   return (
     <SectionWrapper id="resume" className="bg-white">
@@ -15,19 +16,23 @@ export default function Resume() {
       <div className="mb-12">
         <h3 className="text-lg font-semibold text-neutral-900 mb-4">Download</h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-          {resumeVariants.map((variant) => (
-            <a
-              key={variant.path}
-              href={variant.path}
-              download
-              className="flex flex-col items-center gap-2 p-4 rounded-lg border border-neutral-200 hover:border-accent hover:bg-surface transition-colors text-center group"
-            >
-              <Download size={18} className="text-muted group-hover:text-accent transition-colors" />
-              <span className="text-sm font-medium text-neutral-700 group-hover:text-accent transition-colors leading-tight">
-                {variant.label}
-              </span>
-            </a>
-          ))}
+          {resumeVariants.map((variant) => {
+            const Icon = variant.icon;
+            return (
+              <a
+                key={variant.path}
+                href={variant.path}
+                download
+                className="flex flex-col items-center gap-2 p-4 rounded-lg border border-neutral-200 hover:border-accent hover:bg-surface transition-colors text-center group"
+              >
+                <Icon size={22} className="text-muted group-hover:text-accent transition-colors" />
+                <span className="text-sm font-medium text-neutral-700 group-hover:text-accent transition-colors leading-tight">
+                  {variant.label}
+                </span>
+                <Download size={13} className="text-neutral-300 group-hover:text-accent transition-colors" />
+              </a>
+            );
+          })}
         </div>
       </div>
 
