@@ -1,22 +1,34 @@
-import { resumeData } from "@/data/resume";
-import { siteConfig } from "@/data/site";
+import { resumeData, resumeVariants } from "@/data/resume";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import TechTag from "@/components/ui/TechTag";
-import Button from "@/components/ui/Button";
 import { Download } from "lucide-react";
 
 export default function Resume() {
   return (
     <SectionWrapper id="resume" className="bg-white">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
-        <div>
-          <h2 className="text-3xl font-bold text-neutral-900 mb-2">Resume</h2>
-          <p className="text-muted">Experience, skills, and education</p>
+      <div className="mb-12">
+        <h2 className="text-3xl font-bold text-neutral-900 mb-2">Resume</h2>
+        <p className="text-muted">Experience, skills, and education</p>
+      </div>
+
+      {/* Resume Downloads */}
+      <div className="mb-12">
+        <h3 className="text-lg font-semibold text-neutral-900 mb-4">Download</h3>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+          {resumeVariants.map((variant) => (
+            <a
+              key={variant.path}
+              href={variant.path}
+              download
+              className="flex flex-col items-center gap-2 p-4 rounded-lg border border-neutral-200 hover:border-accent hover:bg-surface transition-colors text-center group"
+            >
+              <Download size={18} className="text-muted group-hover:text-accent transition-colors" />
+              <span className="text-sm font-medium text-neutral-700 group-hover:text-accent transition-colors leading-tight">
+                {variant.label}
+              </span>
+            </a>
+          ))}
         </div>
-        <Button href={siteConfig.resume} download variant="outline">
-          <Download size={16} />
-          Download PDF
-        </Button>
       </div>
 
       {/* Skills */}
@@ -31,9 +43,7 @@ export default function Resume() {
 
       {/* Experience */}
       <div className="mb-12">
-        <h3 className="text-lg font-semibold text-neutral-900 mb-6">
-          Experience
-        </h3>
+        <h3 className="text-lg font-semibold text-neutral-900 mb-6">Experience</h3>
         <div className="space-y-8">
           {resumeData.experience.map((job) => (
             <div key={`${job.company}-${job.start}`} className="relative pl-4 border-l-2 border-blue-100">
@@ -61,9 +71,7 @@ export default function Resume() {
 
       {/* Education */}
       <div>
-        <h3 className="text-lg font-semibold text-neutral-900 mb-4">
-          Education
-        </h3>
+        <h3 className="text-lg font-semibold text-neutral-900 mb-4">Education</h3>
         <div className="space-y-3">
           {resumeData.education.map((edu) => (
             <div key={edu.institution} className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">

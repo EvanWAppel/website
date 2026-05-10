@@ -38,3 +38,8 @@ export interface ResumeData {
   experience: Job[];
   education: Education[];
 }
+
+export interface ResumeVariant {
+  label: string;
+  path: string;
+}
