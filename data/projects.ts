@@ -7,35 +7,25 @@ export const projects: Project[] = [
     description:
       "This site — a clean, data-driven portfolio built with Next.js App Router, Tailwind CSS v4, and TypeScript. Zero-config Vercel deployment.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-    github: "https://github.com/evanappel/evan-site",
-    live: "https://evanappel.com",
+    github: "https://github.com/EvanWAppel/website",
     featured: true,
   },
   {
-    id: "project-2",
-    title: "Project Two",
+    id: "elvis",
+    title: "Elvis — dbt + Snowflake Portfolio",
     description:
-      "A full-stack web application featuring real-time collaboration, authentication, and a RESTful API. Built for scale and reliability.",
-    tech: ["React", "Node.js", "PostgreSQL", "Redis"],
-    github: "https://github.com/evanappel/project-two",
+      "Named after Las Vegas's most recognizable figure, this project explores free datasets about the Las Vegas Valley using dbt and Snowflake. Built to learn analytics engineering patterns: modular transformations, testing, and dimensional modeling.",
+    tech: ["dbt", "Snowflake", "SQL", "Python"],
+    github: "https://github.com/EvanWAppel/elvis",
     featured: true,
   },
   {
-    id: "project-3",
-    title: "Project Three",
+    id: "guzzolene",
+    title: "Guzzolene — Gas Economics Tracker",
     description:
-      "A developer tool that automates repetitive workflows, saving hours of manual work each week. Includes a CLI and web dashboard.",
-    tech: ["Python", "FastAPI", "Docker", "TypeScript"],
-    github: "https://github.com/evanappel/project-three",
-    live: "https://project-three.example.com",
+      "Tracks personal gas purchase history for a Mazda 3 Sport to see whether fuel economy has measurably changed — and to put price swings in the context of geopolitical events. Plots cost per mile overlaid with WTI crude oil prices.",
+    tech: ["Python", "Jupyter", "pandas", "Matplotlib"],
+    github: "https://github.com/EvanWAppel/guzzolene",
     featured: true,
-  },
-  {
-    id: "project-4",
-    title: "Project Four",
-    description:
-      "An open-source library for simplifying complex data transformations with a type-safe, composable API.",
-    tech: ["TypeScript", "Jest", "GitHub Actions"],
-    github: "https://github.com/evanappel/project-four",
   },
 ];
