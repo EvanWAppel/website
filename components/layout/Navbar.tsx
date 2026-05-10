@@ -6,10 +6,10 @@ import Link from "next/link";
 import { siteConfig } from "@/data/site";
 
 const navLinks = [
-  { label: "About", href: "#hero" },
-  { label: "Projects", href: "#projects" },
-  { label: "Resume", href: "#resume" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#hero" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Resume", href: "/#resume" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const externalLinks = [{ label: "Fiction", href: "/fiction" }];
@@ -22,7 +22,7 @@ export default function Navbar() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
           <a
-            href="#hero"
+            href="/#hero"
             className="font-semibold text-neutral-900 hover:text-accent transition-colors"
           >
             {siteConfig.name}
