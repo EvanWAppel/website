@@ -3,7 +3,7 @@ import type { Project } from "@/types";
 export const projects: Project[] = [
   {
     id: "portfolio",
-    title: "Personal Portfolio",
+    title: "enki",
     description:
       "This site — a clean, data-driven portfolio built with Next.js App Router, Tailwind CSS v4, and TypeScript. Zero-config Vercel deployment.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
