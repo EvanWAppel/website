@@ -1,7 +1,7 @@
 import type { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
-  name: "Evan Appel",
+  name: "enki",
   title: "Data Analyst",
   bio: "A resourceful data analyst with ten years of experience. Solution driven and collaborative, committed to solving problems within constraints, but willing and able to adapt to new technologies and philosophies. Strong background in SQL and Python, with active pursuits in data engineering and machine learning.",
   photo: "/photo.jpg",
