@@ -18,7 +18,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const piece = getFictionBySlug(slug);
   if (!piece) return {};
-  return { title: piece.title };
+  return {
+    title: piece.title,
+    openGraph: { title: piece.title },
+    twitter: { title: piece.title },
+  };
 }
 
 function wordCount(text: string): number {
