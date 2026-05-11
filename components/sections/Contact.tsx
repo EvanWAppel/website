@@ -26,9 +26,9 @@ const links = [
 
 export default function Contact() {
   return (
-    <SectionWrapper id="contact" className="bg-surface">
+    <SectionWrapper id="contact" className="bg-surface dark:bg-neutral-800">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-neutral-900 mb-3">
+        <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-3">
           Get in Touch
         </h2>
         <p className="text-muted max-w-md mx-auto">
@@ -44,7 +44,7 @@ export default function Contact() {
             target={href.startsWith("mailto") ? undefined : "_blank"}
             rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
             aria-label={label}
-            className="flex items-center gap-3 px-6 py-4 bg-white border border-neutral-200 rounded-xl hover:border-accent hover:text-accent transition-colors group w-full sm:w-auto"
+            className="flex items-center gap-3 px-6 py-4 bg-white dark:bg-neutral-700 border border-neutral-200 dark:border-neutral-600 rounded-xl hover:border-accent hover:text-accent transition-colors group w-full sm:w-auto"
           >
             <Icon
               size={20}
@@ -54,7 +54,7 @@ export default function Contact() {
               <p className="text-xs font-medium text-muted uppercase tracking-wide">
                 {label}
               </p>
-              <p className="text-sm font-medium text-neutral-800 group-hover:text-accent transition-colors">
+              <p className="text-sm font-medium text-neutral-800 dark:text-neutral-200 group-hover:text-accent transition-colors">
                 {display}
               </p>
             </div>

@@ -20,7 +20,7 @@ const variantClasses: Record<ButtonVariant, string> = {
   outline:
     "border border-accent text-accent hover:bg-accent hover:text-white focus-visible:ring-accent",
   ghost:
-    "text-neutral-700 hover:text-accent hover:bg-neutral-100 focus-visible:ring-neutral-400",
+    "text-neutral-700 dark:text-neutral-300 hover:text-accent hover:bg-neutral-100 dark:hover:bg-neutral-700 focus-visible:ring-neutral-400",
 };
 
 const base =
