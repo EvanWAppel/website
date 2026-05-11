@@ -2,11 +2,11 @@ import type { ResumeData, ResumeVariant } from "@/types";
 import { BarChart2, Workflow, Database, Terminal, FlaskConical } from "lucide-react";
 
 export const resumeVariants: ResumeVariant[] = [
-  { label: "Senior Data Analyst", path: "/resumes/evan_appel_senior_data_analyst.pdf", icon: BarChart2 },
-  { label: "Analytics Engineer", path: "/resumes/evan_appel_analytics_engineer.pdf", icon: Workflow },
-  { label: "Data Engineer", path: "/resumes/evan_appel_data_engineer.pdf", icon: Database },
-  { label: "Python Developer", path: "/resumes/evan_appel_python_developer.pdf", icon: Terminal },
-  { label: "Data Scientist", path: "/resumes/evan_appel_data_scientist.pdf", icon: FlaskConical },
+  { label: "Senior Data Analyst", slug: "senior-data-analyst", path: "/resumes/evan_appel_senior_data_analyst.pdf", icon: BarChart2 },
+  { label: "Analytics Engineer", slug: "analytics-engineer", path: "/resumes/evan_appel_analytics_engineer.pdf", icon: Workflow },
+  { label: "Data Engineer", slug: "data-engineer", path: "/resumes/evan_appel_data_engineer.pdf", icon: Database },
+  { label: "Python Developer", slug: "python-developer", path: "/resumes/evan_appel_python_developer.pdf", icon: Terminal },
+  { label: "Data Scientist", slug: "data-scientist", path: "/resumes/evan_appel_data_scientist.pdf", icon: FlaskConical },
 ];
 
 export const resumeData: ResumeData = {

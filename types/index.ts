@@ -19,6 +19,7 @@ export interface Project {
   github?: string;
   live?: string;
   featured?: boolean;
+  logo?: string;
 }
 
 export interface Job {
@@ -43,6 +44,7 @@ export interface ResumeData {
 
 export interface ResumeVariant {
   label: string;
+  slug: string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string }>;
 }

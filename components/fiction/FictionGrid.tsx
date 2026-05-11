@@ -17,9 +17,9 @@ function FictionCard({ piece, cover }: { piece: FictionPiece; cover: string }) {
   return (
     <Link
       href={`/fiction/${piece.slug}`}
-      className="group block rounded-xl border border-neutral-200 bg-white overflow-hidden hover:border-accent hover:shadow-sm transition-all"
+      className="group block rounded-xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 overflow-hidden hover:border-accent hover:shadow-sm transition-all"
     >
-      <div className="w-full bg-neutral-100">
+      <div className="w-full bg-neutral-100 dark:bg-neutral-700">
         <Image
           src={cover}
           alt={piece.title}
@@ -31,10 +31,10 @@ function FictionCard({ piece, cover }: { piece: FictionPiece; cover: string }) {
       </div>
       <div className="p-5">
         <div className="flex items-start justify-between gap-3 mb-2">
-          <h3 className="font-semibold text-neutral-900 group-hover:text-accent transition-colors leading-snug">
+          <h3 className="font-semibold text-neutral-900 dark:text-white group-hover:text-accent transition-colors leading-snug">
             {piece.title}
           </h3>
-          <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded-full bg-neutral-100 text-muted capitalize">
+          <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded-full bg-neutral-100 dark:bg-neutral-700 text-muted capitalize">
             {piece.type === "story" ? "Story" : "Poem"}
           </span>
         </div>
@@ -67,7 +67,7 @@ export default function FictionGrid({
             className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
               filter === value
                 ? "bg-accent text-white"
-                : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
+                : "bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-700"
             }`}
           >
             {label}

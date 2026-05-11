@@ -19,9 +19,9 @@ export default function Projects() {
   const next = () => go((current + 1) % projects.length, 1);
 
   return (
-    <SectionWrapper id="projects" className="bg-surface">
+    <SectionWrapper id="projects" className="bg-surface dark:bg-neutral-800">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-neutral-900 mb-3">Projects</h2>
+        <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-3">Projects</h2>
         <p className="text-muted max-w-xl mx-auto">
           A selection of things I&apos;ve built. All source code is on GitHub.
         </p>
@@ -32,18 +32,18 @@ export default function Projects() {
         <button
           onClick={prev}
           aria-label="Previous project"
-          className="absolute -left-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white border border-neutral-200 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all"
+          className="absolute -left-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-neutral-700 border border-neutral-200 dark:border-neutral-600 shadow-sm hover:shadow-md hover:border-neutral-300 dark:hover:border-neutral-500 transition-all"
         >
-          <ChevronLeft size={18} className="text-neutral-600" />
+          <ChevronLeft size={18} className="text-neutral-600 dark:text-neutral-300" />
         </button>
 
         {/* Arrow: next */}
         <button
           onClick={next}
           aria-label="Next project"
-          className="absolute -right-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white border border-neutral-200 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all"
+          className="absolute -right-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-neutral-700 border border-neutral-200 dark:border-neutral-600 shadow-sm hover:shadow-md hover:border-neutral-300 dark:hover:border-neutral-500 transition-all"
         >
-          <ChevronRight size={18} className="text-neutral-600" />
+          <ChevronRight size={18} className="text-neutral-600 dark:text-neutral-300" />
         </button>
 
         {/* Sliding card — key change triggers remount + fresh animation */}
@@ -66,7 +66,7 @@ export default function Projects() {
               className={`h-2 rounded-full transition-all duration-300 ${
                 i === current
                   ? "w-5 bg-accent"
-                  : "w-2 bg-neutral-300 hover:bg-neutral-400"
+                  : "w-2 bg-neutral-300 dark:bg-neutral-600 hover:bg-neutral-400 dark:hover:bg-neutral-500"
               }`}
             />
           ))}

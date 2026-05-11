@@ -9,6 +9,7 @@ export const projects: Project[] = [
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
     github: "https://github.com/EvanWAppel/website",
     featured: true,
+    logo: "/assets/logos/projects/enki.svg",
   },
   {
     id: "elvis",
@@ -18,6 +19,7 @@ export const projects: Project[] = [
     tech: ["dbt", "Snowflake", "SQL", "Python"],
     github: "https://github.com/EvanWAppel/elvis",
     featured: true,
+    logo: "/assets/logos/projects/elvis.svg",
   },
   {
     id: "guzzolene",
@@ -26,7 +28,9 @@ export const projects: Project[] = [
       "Tracks personal gas purchase history for a Mazda 3 Sport to see whether fuel economy has measurably changed — and to put price swings in the context of geopolitical events. Plots cost per mile overlaid with WTI crude oil prices.",
     tech: ["Python", "Jupyter", "pandas", "Matplotlib"],
     github: "https://github.com/EvanWAppel/guzzolene",
+    live: "https://web-eta-six-52.vercel.app/",
     featured: true,
+    logo: "/assets/logos/projects/guzzolene.svg",
   },
   {
     id: "prometheus",
@@ -36,6 +40,7 @@ export const projects: Project[] = [
     tech: ["Python", "pandas", "BigQuery", "Power BI"],
     github: "https://github.com/EvanWAppel/prometheus",
     featured: true,
+    logo: "/assets/logos/projects/prometheus.svg",
   },
   {
     id: "feynman",
@@ -45,6 +50,7 @@ export const projects: Project[] = [
     tech: ["Python", "Jupyter", "SQL", "Polars", "SQLAlchemy"],
     github: "https://github.com/EvanWAppel/feynman",
     featured: true,
+    logo: "/assets/logos/projects/feynman.svg",
   },
   {
     id: "skunkworks",
@@ -54,5 +60,6 @@ export const projects: Project[] = [
     tech: ["Python", "python-docx", "openpyxl", "PyScript"],
     github: "https://github.com/EvanWAppel/skunkworks",
     featured: true,
+    logo: "/assets/logos/projects/skunkworks.svg",
   },
 ];
