@@ -11,7 +11,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="flex bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-xl overflow-hidden hover:shadow-md transition-shadow">
+    <div className="flex h-full bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-xl overflow-hidden hover:shadow-md transition-shadow">
       {/* Left: text content */}
       <div className="flex flex-col flex-1 p-6">
         <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-2">

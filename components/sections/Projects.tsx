@@ -47,10 +47,10 @@ export default function Projects() {
         </button>
 
         {/* Sliding card — key change triggers remount + fresh animation */}
-        <div className="overflow-hidden rounded-xl">
+        <div className="overflow-hidden rounded-xl min-h-[280px]">
           <div
             key={current}
-            className={dir === 1 ? "proj-slide-right" : "proj-slide-left"}
+            className={`h-full ${dir === 1 ? "proj-slide-right" : "proj-slide-left"}`}
           >
             <ProjectCard project={projects[current]} />
           </div>
